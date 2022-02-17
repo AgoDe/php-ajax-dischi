@@ -14,6 +14,29 @@
 <body>
     <div id="app">
         
+        <header class="header">
+        
+            <img src="images/spotify-logo.png" alt="logo">
+    
+            <div class="input-box">
+    
+                <label for="genre">GENRE</label>
+                <select name="genre" id=""
+                v-model="selectedGenre"
+                @change="filterAlbum"
+                >
+                    <option disabled value="" >Filter by Genre</option>
+                    <option value="">All</option>
+                    <option value="Rock">Rock</option>
+                    <option value="Pop">Pop</option>
+                    <option value="Metal">Metal</option>
+                    <option value="Jazz">Jazz</option>
+
+                 </select>
+ 
+            </div>
+           
+        </header>
         <main>
             <div class="flex-box">
 
@@ -27,10 +50,7 @@
                     <div class="details artist">{{disco.author}}</div>
                     <div class="details year">{{disco.year}}</div>
                 </div>
-    
-                   
-                
-    
+
             </div> <!-- end of flex-box -->
         </main>
 
