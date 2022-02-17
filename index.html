@@ -9,13 +9,32 @@
     <link rel="stylesheet" href="style/style.css">
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <div id="app">
         
+        <main>
+            <div class="flex-box">
+
+                <div 
+                class="disk-box"
+                v-for="disco in dischi"
+                >
+                    <img :src="disco.poster" alt="disco.title">
+
+                    <h3 class="title"> {{disco.title}}</h3>
+                    <div class="details artist">{{disco.author}}</div>
+                    <div class="details year">{{disco.year}}</div>
+                </div>
+    
+                   
+                
+    
+            </div> <!-- end of flex-box -->
+        </main>
 
     </div>
-
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

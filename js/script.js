@@ -3,14 +3,14 @@ new Vue({
     data: {
         dischi: [],
     },
-    mounted: {
-        function() {
-            axios.get('http://localhost:8888/php-ajax-dischi/database.php').then((res) => {
-                this.dischi = res
-                console.log(res)
-            })
-        }
+    mounted: function() {
+
+        axios.get('http://localhost:8888/php-ajax-dischi/database.php').then((res) => {
+            this.dischi = res.data
+            console.log(res.data)
+        })
     },
+        
     methods: {
 
     }
